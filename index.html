@@ -219,6 +219,10 @@
 
 
                     <label class="prompt">Adjust the slider to apply the effect  to your image at your desired intensity level:</label><P></P>
+                    
+                    <input type="range" name="continuousSelectedOutput" id="continuousIntensity" value="50" min="0" max="100" step="1" onchange="changeValue(this.value)"><output id="rangevalue">50</output>% intensity
+                    
+                    <p></p>
 
                     <div class="overlay" style="width: 30%;">
                         <img id="continuousOutputTop" style="width: 100%; position: absolute; z-index: 1; opacity: .5;" src="">
@@ -228,7 +232,7 @@
                     </div>
 
                     <P></P>
-                    <input type="range" name="continuousSelectedOutput" id="continuousIntensity" value="50" min="0" max="100" step="1" onchange="changeValue(this.value)"><output id="rangevalue">50</output>% intensity
+                    
 
                     <script>
                         function changeValue(value) {
