@@ -28,6 +28,7 @@
 
         <!--  LINKING TO CSS -->
         <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="css/effects.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
@@ -117,28 +118,40 @@
                             <tr>
                                 <td>
                                     <label class="hide">
-                                        <input id="effect1" name="selectedEffect" value="grayscale" type="radio" style="display: none;" onchange="displayEffect(this.value)">
-                                        <img src="https://static.pexels.com/photos/108092/pexels-photo-108092-small.jpeg" class="grayscale">
+                                        <input id="effect1" name="selectedEffect" value="tintype" type="radio" style="display: none;" onchange="displayEffect(this.value)">
+                                        <img src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg" style="width: 150px;" class="tintype">
                                     </label>
                                 </td>
                                 <td>
                                     <label class="hide">
-                                        <input id="effect2" name="selectedEffect" value="contrast" type="radio" style="display: none;" onchange="displayEffect(this.value)">
-                                        <img src="https://static.pexels.com/photos/108092/pexels-photo-108092-small.jpeg" class="contrast">
+                                        <input id="effect2" name="selectedEffect" value="urbanImpact" type="radio" style="display: none;" onchange="displayEffect(this.value)">
+                                        <img src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg" style="width: 150px;" class="urbanImpact">
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="hide">
+                                        <input id="effect5" name="selectedEffect" value="softBW" type="radio" style="display: none;" onchange="displayEffect(this.value)">
+                                        <img src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg" style="width: 150px;" class="softBW">
                                     </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label class="hide">
-                                        <input id="effect3" name="selectedEffect" value="sepia" type="radio" style="display: none;" onchange="displayEffect(this.value)">
-                                        <img src="https://static.pexels.com/photos/108092/pexels-photo-108092-small.jpeg" class="sepia">
+                                        <input id="effect3" name="selectedEffect" value="warmSoftColor" type="radio" style="display: none;" onchange="displayEffect(this.value)">
+                                        <img src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg" style="width: 150px;" class="warmSoftColor">
                                     </label>
                                 </td>
                                 <td>
                                     <label class="hide">
-                                        <input id="effect4" name="selectedEffect" value="saturate" type="radio" style="display: none;" onchange="displayEffect(this.value)">
-                                        <img src="https://static.pexels.com/photos/108092/pexels-photo-108092-small.jpeg" class="saturate">
+                                        <input id="effect4" name="selectedEffect" value="faded" type="radio" style="display: none;" onchange="displayEffect(this.value)">
+                                        <img src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg" style="width: 150px;" class="faded">
+                                    </label>
+                                </td>
+                                <td>
+                                    <label class="hide">
+                                        <input id="effect6" name="selectedEffect" value="edgyMagazine" type="radio" style="display: none;" onchange="displayEffect(this.value)">
+                                        <img src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg" style="width: 150px;" class="edgyMagazine">
                                     </label>
                                 </td>
                             </tr>
@@ -159,7 +172,7 @@
                     <div style="width: 30%;">
                         <img id="targetImg" style="width: 100%;" src="">
                     </div>
-                    <img id="effectImg" src="https://static.pexels.com/photos/108092/pexels-photo-108092-medium.jpeg">
+                    <img id="effectImg" style="width: 250px;" src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg">
                 </center>
 
                 <p></p>
@@ -219,12 +232,12 @@
 
 
                     <label class="prompt">Adjust the slider to apply the effect  to your image at your desired intensity level:</label><P></P>
-                    
+
                     <input type="range" name="continuousSelectedOutput" id="continuousIntensity" value="50" min="0" max="100" step="1" onchange="changeValue(this.value)"><output id="rangevalue">50</output>% intensity
-                    
+
                     <p></p>
 
-                    <div class="overlay" style="width: 30%;">
+                    <div class="overlay" style="width: 40%;">
                         <img id="continuousOutputTop" style="width: 100%; position: absolute; z-index: 1; opacity: .5;" src="">
                         <p></p>
                         <img id="continuousOutputBottom" style=" width: 100%; z-index: -1;" src="">
@@ -232,7 +245,7 @@
                     </div>
 
                     <P></P>
-                    
+
 
                     <script>
                         function changeValue(value) {
@@ -260,7 +273,7 @@
                         <img style="width: 100%;" id="targetImgfeedback" src="">
                     </div>
                     <div style="width: 30%;">
-                        <img style="width: 100%;" id="effectImgfeedback" src="https://static.pexels.com/photos/108092/pexels-photo-108092-small.jpeg">
+                        <img style="width: 200px;" id="effectImgfeedback" src="http://www.keatleyphoto.com/wp-content/uploads/2016/05/IMG_3486.jpg">
                     </div>
                 </center>
 
@@ -277,7 +290,7 @@
 
                 </div>
 
-                
+
                 <p>&nbsp;</p>
 
                 <aside>
