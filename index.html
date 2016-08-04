@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="contact form example">
         <title>Amazon Turk Survey</title>
+        <link rel="shortcut icon" href="">
     </head>
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -182,6 +183,47 @@
                 <fieldset id="discreteOutput" class="pure-group" style="display: none;">
                     <label for="intensity" class="prompt"> Which edited image most closely resembles how you want the output to appear?</label>
                     <center>
+
+
+                        <label class="prompt">Adjust the slider to apply the effect  to your image at your desired intensity level:</label><P></P>
+
+                        <input type="range" name="discreteSelectedOutput" id="discreteIntensity" value="3" min="1" max="5" step="1" onchange="changeThisValue(this.value)"><output id="rangethisvalue">Moderate</output> intensity
+
+                        <p></p>
+
+                        <div class="overlay" style="width: 40%;">
+                            <img id="discreteOutputTop" style="width: 100%; position: absolute; z-index: 1; opacity: .5;" src="">
+                            <p></p>
+                            <img id="discreteOutputBottom" style=" width: 100%; z-index: -1;" src="">
+
+                        </div>
+
+                        <P></P>
+
+
+                        <script>
+                            function changeThisValue(value) {
+                                
+                                if (value == 1) {
+                                    var level = 'very low';
+                                } else if (value == 2) {
+                                    var level = 'low';
+                                } else if (value == 3) {
+                                    var level = 'moderate';
+                                } else if (value == 4) {
+                                    var level = 'high'; 
+                                } else if (value == 5) {
+                                    var level = 'very high'; 
+                                }
+                                document.getElementById('rangethisvalue').value = level;
+                                document.getElementById('discreteOutputTop').style.opacity = value * 20 * .01; 
+
+                                displayIntensity(value * 20 * .01);
+                            }
+                        </script>
+
+
+<!--
                         <table> 
                             <tr>
                                 <td>
@@ -225,6 +267,7 @@
                                 </td>
                             </tr>
                         </table>
+-->
                     </center>
                 </fieldset>
 
