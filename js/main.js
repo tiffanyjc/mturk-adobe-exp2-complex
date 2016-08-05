@@ -36,8 +36,9 @@ function displayEffect(effect) {
 
 function displayIntensity(intensity) {
     document.getElementById('nextFeedback').disabled = false
-    document.getElementById('nextFeedback').style.opacity = 1
-    document.getElementById('finalImgOverlay').style.opacity  = intensity
+    document.getElementById('nextFeedback').style.opacity = 1;
+    document.getElementById('finalImgOverlay').style.opacity  = intensity;
+    
 }
 
 function displayReturned() {
