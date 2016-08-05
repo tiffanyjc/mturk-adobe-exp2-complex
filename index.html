@@ -184,9 +184,6 @@
                     <label for="intensity" class="prompt"> Which edited image most closely resembles how you want the output to appear?</label>
                     <center>
 
-
-                        <label class="prompt">Adjust the slider to apply the effect  to your image at your desired intensity level:</label><P></P>
-
                         <input type="range" name="discreteSelectedOutput" id="discreteIntensity" value="3" min="1" max="5" step="1" onchange="changeThisValue(this.value)"><output id="rangethisvalue">Moderate</output> intensity
 
                         <p></p>
@@ -230,7 +227,7 @@
 
                     <label class="prompt">Adjust the slider to apply the effect  to your image at your desired intensity level:</label><P></P>
 
-                    <input type="range" name="continuousSelectedOutput" id="continuousIntensity" value="50" min="0" max="100" step="1" onchange="changeValue(this.value)"><output id="rangevalue">50</output>% intensity
+                    <input type="range" name="continuousSelectedOutput" id="continuousIntensity" value="50" min="0" max="100" step="1" onchange="changeContinuousValue(this.value)"><output id="rangevalue">50</output>% intensity
 
                     <p></p>
 
@@ -245,7 +242,7 @@
 
 
                     <script>
-                        function changeValue(value) {
+                        function changeContinuousValue(value) {
                             document.getElementById('rangevalue').value = value;
                             document.getElementById('continuousOutputTop').style.opacity = value * .01; 
 
