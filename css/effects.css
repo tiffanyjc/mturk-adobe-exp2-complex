@@ -25,6 +25,6 @@
 }
 
 .edgyMagazine {
-  
+  filter: grayscale(0%) brightness(180%) contrast(200%) hue-rotate(0deg) opacity(100%) invert(0%) saturate(204%) sepia(53%); 
   -webkit-filter: grayscale(0%) brightness(180%) contrast(200%) hue-rotate(0deg) opacity(100%) invert(0%) saturate(204%) sepia(53%); 
 }
