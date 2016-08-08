@@ -184,7 +184,16 @@
                     <label for="intensity" class="prompt"> Which edited image most closely resembles how you want the output to appear?</label>
                     <center>
 
-                        <input type="range" name="discreteSelectedOutput" id="discreteIntensity" value="3" min="1" max="5" step="1" onchange="changeThisValue(this.value)"><output id="rangethisvalue">Moderate</output> intensity
+                        <input type="range" name="discreteSelectedOutput" id="discreteIntensity" value="3" min="1" max="5" step="1" onchange="changeThisValue(this.value)" list="steplist">
+                        <datalist id="steplist">
+                            <option>Very Low</option>
+                            <option>Low</option>
+                            <option>Moderate</option>
+                            <option>High</option>
+                            <option>Very High</option>
+                        </datalist>
+
+                        <output id="rangethisvalue">Moderate</output> intensity
 
                         <p></p>
 
@@ -376,7 +385,7 @@
                         </table>
                     </center>
                 </fieldset>
-                
+
                 <fieldset class="pure-group">
                     <center>
                         <input style="width: 75%;" name="satisfactiontext" id="satisfactiontext" type="text" placeholder="Please explain your answer.">
@@ -420,7 +429,7 @@
                         </table>
                     </center>
                 </fieldset>
-                
+
                 <fieldset class="pure-group">
                     <center>
                         <input style="width: 75%;" name="creativecontrol1text" id="creativecontrol1text" type="text" placeholder="Please explain your answer.">
@@ -464,7 +473,7 @@
                         </table>
                     </center>
                 </fieldset>
-                
+
                 <fieldset class="pure-group">
                     <center>
                         <input style="width: 75%;" name="creativecontrolamounttext" id="creativecontrolamounttext" type="text" placeholder="Please explain your answer.">
@@ -508,7 +517,7 @@
                         </table>
                     </center>
                 </fieldset>
-                
+
                 <fieldset class="pure-group">
                     <center>
                         <input style="width: 75%;" name="creativeselftext" id="creativeselftext" type="text" placeholder="Please explain your answer.">
@@ -552,7 +561,7 @@
                         </table>
                     </center>
                 </fieldset>
-                
+
                 <fieldset class="pure-group">
                     <center>
                         <input style="width: 75%;" name="expectations2text" id="expectations2text" type="text" placeholder="Please explain your answer.">
@@ -596,7 +605,7 @@
                         </table>
                     </center>
                 </fieldset>
-                
+
                 <fieldset class="pure-group">
                     <center>
                         <input style="width: 75%;" name="creativecontrol2text" id="creativecontrol2text" type="text" placeholder="Please explain your answer.">
@@ -640,7 +649,7 @@
                         </table>
                     </center>
                 </fieldset>
-                
+
                 <fieldset class="pure-group">
                     <center>
                         <input style="width: 75%;" name="ownershiptext" id="ownershiptext" type="text" placeholder="Please explain your answer.">
