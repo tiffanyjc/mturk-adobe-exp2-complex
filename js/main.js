@@ -26,9 +26,6 @@ function displayEffect(effect) {
     document.getElementById('effectImg').className = effect;
     document.getElementById('effectImgfeedback').className = effect;
     document.getElementById('finalImgOverlay').className = effect;
-//    document.getElementById('outputLowTop').className = effect
-//    document.getElementById('outputMedTop').className = effect
-//    document.getElementById('outputHighTop').className = effect
     document.getElementById('continuousOutputTop').className = effect;
     document.getElementById('discreteOutputTop').className = effect;
     
@@ -112,14 +109,8 @@ function readURL(input) {
             document.getElementById('finalImg').src = e.target.result; 
             document.getElementById('finalImgOverlay').src = e.target.result; 
             document.getElementById('targetImgfeedback').src = e.target.result; 
-//            document.getElementById('outputLow').src = e.target.result;
-//            document.getElementById('outputLowTop').src = e.target.result;
-//
-//            document.getElementById('outputMedTop').src = e.target.result;
-//
-//            document.getElementById('outputMed').src = e.target.result;
-//            document.getElementById('outputHigh').src = e.target.result;
-//            document.getElementById('outputHighTop').src = e.target.result;
+
+
             document.getElementById('discreteOutputBottom').src = e.target.result;
             document.getElementById('discreteOutputTop').src = e.target.result;
             document.getElementById('continuousOutputBottom').src = e.target.result;
